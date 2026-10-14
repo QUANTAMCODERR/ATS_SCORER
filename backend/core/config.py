@@ -16,7 +16,7 @@ APP_VERSION='1.0.0'
 APP_DESCRIPTION='analyse resumes against job description using nlp + ml'
 
 ALLOWED_ORIGINS = [
-    'https://appapppy-ktwxupi73vqhjzweksze9d.streamlit.app/'
+    'https://appapppy-9dpgwums7yce9ftubxf8e9.streamlit.app/'
 ]  
 
 #file 
