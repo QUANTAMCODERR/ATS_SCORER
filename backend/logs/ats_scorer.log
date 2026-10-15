@@ -74,3 +74,112 @@
 2026-10-15 01:23:37,427 - INFO - Loading SentenceTransformer: all-MiniLM-L6-v2
 2026-10-15 01:23:56,443 - INFO - Loaded all-MiniLM-L6-v2
 2026-10-15 01:23:56,443 - INFO - All models loaded. API is ready to serve requests.
+2026-10-15 15:33:30,242 - INFO - Starting ATS Resume Analyzer API...
+2026-10-15 15:33:30,242 - INFO - Loading spaCy NLP model: en_core_web_md
+2026-10-15 15:33:40,723 - INFO - Loaded en_core_web_md
+2026-10-15 15:33:40,724 - INFO - Loading SentenceTransformer: all-MiniLM-L6-v2
+2026-10-15 15:34:40,227 - INFO - Loaded all-MiniLM-L6-v2
+2026-10-15 15:34:40,228 - INFO - All models loaded. API is ready to serve requests.
+2026-10-15 15:35:17,979 - ERROR - File parsing failed: failed to find libmagic.  Check your installation
+2026-10-15 15:37:53,832 - INFO - shutting down the api!!
+2026-10-15 15:38:00,228 - INFO - Starting ATS Resume Analyzer API...
+2026-10-15 15:38:00,228 - INFO - Loading spaCy NLP model: en_core_web_md
+2026-10-15 15:38:08,350 - INFO - Loaded en_core_web_md
+2026-10-15 15:38:08,351 - INFO - Loading SentenceTransformer: all-MiniLM-L6-v2
+2026-10-15 15:38:38,857 - INFO - Loaded all-MiniLM-L6-v2
+2026-10-15 15:38:38,857 - INFO - All models loaded. API is ready to serve requests.
+2026-10-15 15:38:44,577 - INFO - shutting down the api!!
+2026-10-15 15:38:47,851 - INFO - Starting ATS Resume Analyzer API...
+2026-10-15 15:38:47,851 - INFO - Loading spaCy NLP model: en_core_web_md
+2026-10-15 15:38:52,145 - INFO - parse_Resume_file: parsing file :resume.docx
+2026-10-15 15:38:52,156 - INFO - resume_parser: Extracted 29 chars from DOCX
+2026-10-15 15:38:52,156 - INFO - parse_resume_file: Extracted 29 chars from resume.docx
+2026-10-15 15:38:55,960 - INFO - Loaded en_core_web_md
+2026-10-15 15:38:55,960 - INFO - Loading SentenceTransformer: all-MiniLM-L6-v2
+2026-10-15 15:39:18,504 - INFO - Loaded all-MiniLM-L6-v2
+2026-10-15 15:39:18,504 - INFO - All models loaded. API is ready to serve requests.
+2026-10-15 15:41:00,132 - INFO - parse_Resume_file: parsing file :Nandan_Resume___May_2026.pdf
+2026-10-15 15:41:00,242 - INFO - parse_resume_file: Extracted 3237 chars from Nandan_Resume___May_2026.pdf
+2026-10-15 15:41:00,242 - INFO - Parsed 'Nandan_Resume___May_2026.pdf': 3237 chars extracted
+2026-10-15 15:41:01,576 - ERROR - Full analysis pipeline failed: Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}
+2026-10-15 15:42:30,708 - INFO - shutting down the api!!
+2026-10-15 15:42:35,933 - INFO - Starting ATS Resume Analyzer API...
+2026-10-15 15:42:35,933 - INFO - Loading spaCy NLP model: en_core_web_md
+2026-10-15 15:42:44,675 - INFO - Loaded en_core_web_md
+2026-10-15 15:42:44,676 - INFO - Loading SentenceTransformer: all-MiniLM-L6-v2
+2026-10-15 15:42:49,166 - INFO - parse_Resume_file: parsing file :resume.docx
+2026-10-15 15:42:49,179 - INFO - resume_parser: Extracted 29 chars from DOCX
+2026-10-15 15:42:49,179 - INFO - parse_resume_file: Extracted 29 chars from resume.docx
+2026-10-15 15:43:20,403 - INFO - Loaded all-MiniLM-L6-v2
+2026-10-15 15:43:20,403 - INFO - All models loaded. API is ready to serve requests.
+2026-10-15 15:43:20,505 - INFO - shutting down the api!!
+2026-10-15 15:43:25,275 - INFO - Starting ATS Resume Analyzer API...
+2026-10-15 15:43:25,276 - INFO - Loading spaCy NLP model: en_core_web_md
+2026-10-15 15:43:32,060 - INFO - Loaded en_core_web_md
+2026-10-15 15:43:32,060 - INFO - Loading SentenceTransformer: all-MiniLM-L6-v2
+2026-10-15 15:43:51,192 - INFO - Loaded all-MiniLM-L6-v2
+2026-10-15 15:43:51,192 - INFO - All models loaded. API is ready to serve requests.
+2026-10-15 15:45:49,905 - INFO - parse_Resume_file: parsing file :Nandan_Resume___May_2026.pdf
+2026-10-15 15:45:50,016 - INFO - parse_resume_file: Extracted 3237 chars from Nandan_Resume___May_2026.pdf
+2026-10-15 15:45:50,017 - INFO - Parsed 'Nandan_Resume___May_2026.pdf': 3237 chars extracted
+2026-10-15 15:45:58,120 - WARNING - Groq resume parse: first attempt returned invalid JSON, retrying...
+2026-10-15 15:46:03,899 - INFO - Groq parsed summary: 'Full-Stack Developer with 5+ years of experience building production web applications across Angular'
+2026-10-15 15:46:03,900 - INFO - Groq parsed skills count: 45
+2026-10-15 15:46:03,900 - INFO - Groq parsed experience count: 2
+2026-10-15 15:46:07,702 - ERROR - Failed to save analysis to Supabase: Client error '404 Not Found' for url 'https://ntffjwtxqsktsxdljywv.supabase.co/rest/v1/analyses'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+2026-10-15 15:46:49,925 - INFO - parse_Resume_file: parsing file :Tushar_Gujjanwar_Resume (3).pdf
+2026-10-15 15:46:50,158 - INFO - parse_resume_file: Extracted 4084 chars from Tushar_Gujjanwar_Resume (3).pdf
+2026-10-15 15:46:50,158 - INFO - Parsed 'Tushar_Gujjanwar_Resume (3).pdf': 4084 chars extracted
+2026-10-15 15:46:57,325 - WARNING - Groq resume parse: first attempt returned invalid JSON, retrying...
+2026-10-15 15:47:02,409 - INFO - Groq parsed summary: ''
+2026-10-15 15:47:02,409 - INFO - Groq parsed skills count: 15
+2026-10-15 15:47:02,409 - INFO - Groq parsed experience count: 3
+2026-10-15 15:47:05,718 - ERROR - Failed to save analysis to Supabase: Client error '404 Not Found' for url 'https://ntffjwtxqsktsxdljywv.supabase.co/rest/v1/analyses'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+2026-10-15 15:50:50,714 - INFO - shutting down the api!!
+2026-10-15 15:50:57,177 - INFO - Starting ATS Resume Analyzer API...
+2026-10-15 15:50:57,177 - INFO - Loading spaCy NLP model: en_core_web_md
+2026-10-15 15:51:05,993 - INFO - Loaded en_core_web_md
+2026-10-15 15:51:05,994 - INFO - Loading SentenceTransformer: all-MiniLM-L6-v2
+2026-10-15 15:51:17,623 - INFO - parse_Resume_file: parsing file :resume.docx
+2026-10-15 15:51:17,635 - INFO - resume_parser: Extracted 29 chars from DOCX
+2026-10-15 15:51:17,635 - INFO - parse_resume_file: Extracted 29 chars from resume.docx
+2026-10-15 15:51:30,818 - INFO - Loaded all-MiniLM-L6-v2
+2026-10-15 15:51:30,818 - INFO - All models loaded. API is ready to serve requests.
+2026-10-15 15:52:42,685 - INFO - shutting down the api!!
+2026-10-15 15:52:46,140 - INFO - Starting ATS Resume Analyzer API...
+2026-10-15 15:52:46,140 - INFO - Loading spaCy NLP model: en_core_web_md
+2026-10-15 15:52:53,620 - INFO - parse_Resume_file: parsing file :resume.docx
+2026-10-15 15:52:53,636 - INFO - resume_parser: Extracted 29 chars from DOCX
+2026-10-15 15:52:53,636 - INFO - parse_resume_file: Extracted 29 chars from resume.docx
+2026-10-15 15:52:54,219 - INFO - Loaded en_core_web_md
+2026-10-15 15:52:54,219 - INFO - Loading SentenceTransformer: all-MiniLM-L6-v2
+2026-10-15 15:53:17,143 - INFO - parse_Resume_file: parsing file :resume.docx
+2026-10-15 15:53:17,156 - INFO - resume_parser: Extracted 29 chars from DOCX
+2026-10-15 15:53:17,156 - INFO - parse_resume_file: Extracted 29 chars from resume.docx
+2026-10-15 15:53:17,752 - INFO - Loaded all-MiniLM-L6-v2
+2026-10-15 15:53:17,752 - INFO - All models loaded. API is ready to serve requests.
+2026-10-15 15:53:17,853 - INFO - shutting down the api!!
+2026-10-15 15:53:20,788 - INFO - Starting ATS Resume Analyzer API...
+2026-10-15 15:53:20,789 - INFO - Loading spaCy NLP model: en_core_web_md
+2026-10-15 15:53:27,921 - INFO - Loaded en_core_web_md
+2026-10-15 15:53:27,922 - INFO - Loading SentenceTransformer: all-MiniLM-L6-v2
+2026-10-15 15:53:47,424 - INFO - Loaded all-MiniLM-L6-v2
+2026-10-15 15:53:47,424 - INFO - All models loaded. API is ready to serve requests.
+2026-10-15 15:54:08,903 - INFO - shutting down the api!!
+2026-10-15 15:54:39,249 - INFO - Starting ATS Resume Analyzer API...
+2026-10-15 15:54:39,249 - INFO - Loading spaCy NLP model: en_core_web_md
+2026-10-15 15:54:45,161 - INFO - Loaded en_core_web_md
+2026-10-15 15:54:45,161 - INFO - Loading SentenceTransformer: all-MiniLM-L6-v2
+2026-10-15 15:55:03,337 - INFO - Loaded all-MiniLM-L6-v2
+2026-10-15 15:55:03,338 - INFO - All models loaded. API is ready to serve requests.
+2026-10-15 15:58:24,306 - INFO - parse_Resume_file: parsing file :Nandan_Resume___May_2026.pdf
+2026-10-15 15:58:24,413 - INFO - parse_resume_file: Extracted 3237 chars from Nandan_Resume___May_2026.pdf
+2026-10-15 15:58:24,413 - INFO - Parsed 'Nandan_Resume___May_2026.pdf': 3237 chars extracted
+2026-10-15 15:58:32,432 - WARNING - Groq resume parse: first attempt returned invalid JSON, retrying...
+2026-10-15 15:58:38,390 - INFO - Groq parsed summary: 'Full-Stack Developer with 5+ years of experience building production web applications across Angular'
+2026-10-15 15:58:38,391 - INFO - Groq parsed skills count: 53
+2026-10-15 15:58:38,391 - INFO - Groq parsed experience count: 2
+2026-10-15 15:58:41,850 - ERROR - Failed to save analysis to Supabase: Client error '404 Not Found' for url 'https://ntffjwtxqsktsxdljywv.supabase.co/rest/v1/analyses'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404

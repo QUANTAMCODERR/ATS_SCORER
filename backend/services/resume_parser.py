@@ -1,6 +1,6 @@
 import io
-import magic
-from typing import Tuple, Optional, Tuple
+import zipfile
+from typing import Optional, Tuple
 
 import pdfplumber
 from docx import Document
@@ -22,11 +22,31 @@ from backend.core.config import (
     SUPPORTED_MIME_TYPES
 )
 
+_PDF_SIGNATURE = b'%PDF-'
+_OLE_SIGNATURE = b'\xd0\xcf\x11\xe0\xa1\xb1\x1a\xe1'
+_DOCX_REQUIRED_FILES = {'[Content_Types].xml', 'word/document.xml'}
+
 class FileParsingError(Exception):
     pass
 
 class FileValidationError(Exception):
     pass
+
+def _detect_mime_type(file_data: bytes) -> Optional[str]:
+    if _PDF_SIGNATURE in file_data[:1024]:
+        return 'application/pdf'
+
+    if file_data.startswith(_OLE_SIGNATURE):
+        return 'application/msword'
+
+    try:
+        with zipfile.ZipFile(io.BytesIO(file_data)) as archive:
+            if _DOCX_REQUIRED_FILES.issubset(archive.namelist()):
+                return 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
+    except zipfile.BadZipFile:
+        pass
+
+    return None
 
 def validate_file(file_data:bytes, filename:str)->Tuple[bool, str, Optional[str]]:
     file_size_bytes = len(file_data)
@@ -38,17 +58,16 @@ def validate_file(file_data:bytes, filename:str)->Tuple[bool, str, Optional[str]
         ), None
     
     if file_size_bytes==0:
-        return False, 'uploade file is empty...please check the file you have uploaded and try again'
-    
-    try:
-        mime_type=magic.from_buffer(file_data, mime=True)
-    except Exception as e:
-        return False, f"error deteminin the file type : {e}", None
+        return False, (
+            'Uploaded file is empty. Please check the file you have uploaded and try again.'
+        ), None
+
+    mime_type = _detect_mime_type(file_data)
     
     if mime_type not in SUPPORTED_MIME_TYPES:
         supported=', '.join(SUPPORTED_MIME_TYPES.keys()).upper()
         return False, (
-            f'Unsupported file type: {mime_type}. '
+            f'Unsupported file type: {mime_type or "unknown"}. '
             f'Please upload one of: {supported}.'
         ), None
     

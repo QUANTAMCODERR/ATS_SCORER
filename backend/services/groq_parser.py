@@ -1,25 +1,21 @@
-import os
 import json 
 import logging
 from typing import Dict
 
 from groq import Groq
 
+from backend.core.config import GROQ_API_KEY, GROQ_MODEL
+
 logger=logging.getLogger('ats_resume_scorer')
-
-
-GROQ_MODEL='llama-3.3-70b-versatile'
 
 _client=None
 
 def _get_client()->Groq:
     global _client
     if _client is None:
-        api_key=os.getenv('GROQ_API_KEY')
-
-        if not api_key:
+        if not GROQ_API_KEY:
             raise ValueError("GROQ_API_KEY environment variable not set")
-        _client=Groq(api_key=api_key)
+        _client=Groq(api_key=GROQ_API_KEY)
     return _client
 
 RESUME_SYSTEM_PROMPT = (
@@ -257,4 +253,3 @@ def _validate_resume_result(result: dict) -> dict:
         proj.setdefault("technologies", [])
 
     return result
-
